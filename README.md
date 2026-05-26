@@ -83,3 +83,30 @@ total_score = 0.6 * chip_score + 0.4 * trend_score
 - 本系統僅為策略研究範例。
 - 過去績效不代表未來結果。
 - 投資前請自行評估風險。
+
+## 驗證指令執行位置
+
+請在**專案根目錄**（也就是包含 `app.py`、`src/`、`requirements.txt` 的資料夾）執行：
+
+```bash
+python -m compileall app.py src
+```
+
+範例：
+
+```bash
+cd /workspace/E
+python -m compileall app.py src
+```
+
+## 在 GitHub 看得到執行結果嗎？
+
+可以。
+
+本專案已加入 GitHub Actions（`.github/workflows/ci.yml`），每次 `push` 或 `pull request` 都會自動執行：
+
+```bash
+python -m compileall app.py src
+```
+
+你可以在 GitHub 倉庫頁面的 **Actions** 分頁查看每次執行的成功/失敗與完整 log。
